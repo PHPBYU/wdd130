@@ -1,0 +1,246 @@
+/* ====================================
+   CSS Variables (Theme Colors and Fonts)
+==================================== */
+:root {
+  --primary-color: #ccd7ae;
+  --secondary-color: #333;
+  --accent1-color: #A696A4;
+  --accent2-color: #AFD2E9;
+  --primary-color-dark: #B18795;
+  --background-color: #f4f4f4;
+  --heading-font: "Merriweather", serif;
+  --body-font: "Merriweather Sans", sans-serif;
+}
+
+/* ====================================
+   Reset and Base Styles
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+  padding-bottom: 120px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+/* ====================================
+   Header and Footer
+==================================== */
+header,
+footer {
+  max-width: 840px;
+  margin: 0 auto;
+  background-color: var(--accent1-color);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-box img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+/* ====================================
+   Navigation (Updated for Grid Mobile)
+==================================== */
+.nav-container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: #36454f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Default nav links (desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  display: block;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+}
+
+/* ====================================
+   Responsive Navigation for Mobile
+   Displaying in Grid Format
+==================================== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #36454f;
+    border-radius: 10px;
+    padding: 1rem;
+    justify-items: center;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: grid;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: var(--primary-color-dark);
+  }
+}
+
+/* ====================================
+   Main Content
+==================================== */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px #333333;
+  margin-bottom: 1rem;
+}
+
+/* ====================================
+   Banner / Hero Image
+==================================== */
+.banner {
+  background-color: transparent; 
+  padding: 0;
+  text-align: center;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* ====================================
+   Social Media Icons
+==================================== */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: auto;
+}
+
+/* ====================================
+   Photo Grid
+==================================== */
+.photo-grid {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.about-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================================
+   Additional Mobile Adjustments
+==================================== */
+@media (max-width: 600px) {
+  footer {
+    font-size: 14px;
+    padding: 0.8rem;
+  }
+
+  .socialmedia img {
+    width: 24px;
+  }
+
+  .about-image {
+    height: 160px;
+  }
+}
