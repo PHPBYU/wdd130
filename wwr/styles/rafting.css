@@ -357,3 +357,20 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+.contact-info {
+  border: 2px solid #333;   /* dark gray border */
+  padding: 1rem;            /* spacing inside the box */
+  border-radius: 8px;       /* rounded corners, optional */
+  max-width: 400px;         /* optional width */
+  background-color: #f9f9f9; /* optional background color */
+  margin-bottom: 1.5rem;    /* spacing below */
+}
