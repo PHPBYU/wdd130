@@ -501,12 +501,16 @@ button:hover {
 }
 
 
+
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
-  gap: 1.5rem;
-  justify-items: center; /* center the cards in each column */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
+
 
 
 .team-member {
@@ -518,9 +522,10 @@ button:hover {
 
 .team-member img {
   width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 50%;
-  margin-bottom: 0.8rem;
+  object-fit: cover;
 }
 
 .team-member h3 {
