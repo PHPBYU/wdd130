@@ -33,7 +33,7 @@ body {
    Typography
 ==================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--secondary-color);
+  font-family: var(--heading-font);
 }
 
 p {
@@ -544,3 +544,11 @@ button:hover {
   font-size: 0.95rem;
   color: #555;
 }
+
+
+
+
+
+
+
+
