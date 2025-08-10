@@ -376,15 +376,9 @@ main {
 }
 
 
-
-
-
-
-
 /* ====================================
    Decoration for form
 ==================================== */
-
 /* Form Container */
 form {
   max-width: 900px;
@@ -490,11 +484,6 @@ button:hover {
 }
 
 
-
-
-
-
-
 /* ====================================
    Decoration for team photos in contact.html
 ==================================== */
@@ -529,7 +518,7 @@ button:hover {
 
 .team-member img {
   width: 100%;
-  height: 300px;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 0.8rem;
 }
@@ -544,11 +533,3 @@ button:hover {
   font-size: 0.95rem;
   color: #555;
 }
-
-
-
-
-
-
-
-
