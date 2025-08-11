@@ -390,9 +390,10 @@ main {
 /* ====================================
    Decoration for form
 ==================================== */
+
 /* Form Container */
 form {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   background: white;
   padding: 1.5rem;
