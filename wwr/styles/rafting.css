@@ -476,6 +476,12 @@ textarea {
   cursor: pointer;
 }
 
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-right: 12px; 
+}
+
+
 /* Submit button styling */
 button {
   padding: 0.6rem 1.2rem;
