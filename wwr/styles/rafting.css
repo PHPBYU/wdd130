@@ -810,60 +810,51 @@ button:hover {
 /* ====================================
    Decoration for table in trips.html
 ==================================== */
-        .table-trips {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-family: Arial, sans-serif;
-        }
+/* Make table container scrollable on small screens */
+.table-trips-wrapper {
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll if table is too wide */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  margin-bottom: 2rem;
+}
 
-        /* Header styling */
-        .table-trips th {
-            background-color: #4CAF50; /* green header */
-            color: white;
-            padding: 12px;
-            text-align: center;
-            font-size: 16px;
-        }
+/* Basic table styling */
+.table-trips {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* optional: ensures table keeps minimum width */
+}
 
-        /* Cell styling */
-        .table-trips td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-            font-size: 14px;
-        }
+.table-trips th,
+.table-trips td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
 
-        /* Alternate row colors */
-        .table-trips tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
+.table-trips th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
 
-        /* Hover effect */
-        .table-trips tr:hover {
-            background-color: #e2f0d9;
-            transition: background-color 0.3s ease;
-        }
+.table-trips td .cta-trips a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
-        /* Responsive table for smaller screens */
-        @media screen and (max-width: 768px) {
-            .table-trips thead {
-                display: none; /* hide headers */
-            }
-            .table-trips tr {
-                display: block;
-                margin-bottom: 15px;
-            }
-            .table-trips td {
-                display: flex;
-                justify-content: space-between;
-                padding: 10px;
-                border: none;
-                border-bottom: 1px solid #ddd;
-            }
-            .table-trips td::before {
-                content: attr(data-label);
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-        }
+.table-trips td .cta-trips a:hover {
+  background-color: #005fa3;
+}
+
+/* Optional: smaller text on mobile */
+@media (max-width: 600px) {
+  .table-trips th,
+  .table-trips td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
